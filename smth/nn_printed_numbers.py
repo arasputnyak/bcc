@@ -47,5 +47,5 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 model.fit_generator(train_gen, steps_per_epoch=4500 // batch, validation_data=valid_gen, validation_steps=1900 // batch, epochs=30, verbose=2)
 
 scores = model.evaluate_generator(test_gen, steps=2000 // 30)
-print("Точность работы на тестовых данных: %.2f%%" % (scores[1]*100))
+print("Acc on test data: %.2f%%" % (scores[1]*100))
 model.save('model2')
