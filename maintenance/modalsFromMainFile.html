@@ -1,0 +1,115 @@
+<!-- Modal for technicalresult-->
+    <div class="modal fade" id="maintenanceModal" role="dialog" data-backdrop="false" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="maintenanceModalLabel">Техническое обслуживание</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="entryTimeId" class="control-label col-sm-3">Время входа *</label>
+
+                        <div class="col-sm-4">
+                            <input class="form-control required" type="text" id="entryTimeId">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="exitTimeId" class="control-label col-sm-3">Время выхода</label>
+
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="exitTimeId">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="equipmentSelectorId" class="control-label col-sm-3">Оборудование</label>
+
+                        <div class="col-sm-9">
+                            <select style="width: 100%;" class="form-control" id="equipmentSelectorId">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="jobDescriptionId" class="control-label col-sm-3">Содержание работ</label>
+
+                        <div class="col-sm-9">
+                            <textarea style="resize: none; height: 60px; max-height: 60px;" class="form-control" id="jobDescriptionId"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="workerSelectorId" class="control-label col-sm-3">Исполнитель</label>
+
+                        <div class="col-sm-9">
+                            <select style="width: 100%;" class="form-control" id="workerSelectorId">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button id="cancelId" class="button_blue col-sm-3 pull-right">Отмена</button>
+                            <button id="saveId" class="button_blue col-sm-4 pull-right">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="idRecord"/> <!-- id идентификатор записи в таблице technical_service_result -->
+    </div>
+
+    <div class="modal fade" id="maintenanceModalRO" tabindex="-1" role="dialog" data-backdrop="false"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="maintenanceModalLabelRO">Техническое обслуживание</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">Время входа</label>
+                        <div class="col-sm-4 entry-div"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">Время выхода</label>
+                        <div class="col-sm-4 exit-div"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">Оборудование</label>
+                        <div class="col-sm-9 equip-div"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">Содержание работ</label>
+                        <div class="col-sm-9 jobDiscr-div"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">Исполнитель</label>
+                        <div class="col-sm-9 worker-div"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button id="oKId" class="button_blue col-sm-3 pull-right">Ок</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="idRecordRO"/> <!-- id идентификатор записи в таблице technical_service_result -->
+    </div>
